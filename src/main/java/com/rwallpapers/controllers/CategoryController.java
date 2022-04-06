@@ -28,11 +28,17 @@ public class CategoryController {
 		return categoryService.saveCategory(category);
 	}
 	
+	/**
+	 * Activate A Category
+	 */
 	@PostMapping("/activate")
 	public Mono<GenericResponse<?>> activateCategory(@RequestBody Category category) {
 		return categoryService.activateCategory(category);
 	}
 	
+	/**
+	 * DeActivate A Category
+	 */
 	@PostMapping("/deActivate")
 	public Mono<GenericResponse<?>> deActivateCategory(@RequestBody Category category) {
 		return categoryService.deActivateCategory(category);
@@ -57,7 +63,7 @@ public class CategoryController {
 	}
 	
 	/**
-	 * Returns Only The Active Categories
+	 * Returns Only The DeActivated Categories
 	 */
 	@GetMapping("/getDeActivatedCategories")
 	public Flux<Category> getDeActivatedCategories() {

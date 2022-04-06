@@ -33,7 +33,6 @@ public class CategoryService {
 					sink.success(GenericResponse.builder().code(ResponseCodes.ERR.name()).body(category).message("Deactivated Category").build());
 				}
             },err->{
-            	err.printStackTrace();
             	sink.success(GenericResponse.builder().code(ResponseCodes.ERR.name()).body(new Category()).message("Something Went Wrong").build());
             });
 		});
