@@ -34,7 +34,7 @@ public class WallpaperService {
 				sink.success(GenericResponse.builder().code(ResponseCodes.ERR.name()).body(new Category()).message("Something Went Wrong").build());
 			});
 		});
-	}
+	}   
 
 	public Flux<Wallpaper> getWallpapersByCategoryName(String categoryName){
 		return wallpaperRepo.findByCategoryName(categoryName);
